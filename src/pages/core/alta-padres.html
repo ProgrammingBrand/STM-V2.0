@@ -1,0 +1,111 @@
+<div class="header">
+  <h3>Registro de Padres</h3>
+</div>
+<div class="main-form">
+  <form id="userForm" onsubmit="handleSubmit(event)">
+
+    <!-- Sección de Datos Personales -->
+    <h3>Datos Personales</h3>
+    <div class="form-row">
+      <div class="form-column left">
+        <div class="form-group">
+          <label class="form-label">Nombre(s)</label>
+          <input id="nombre" class="form-input" type="text" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">CURP</label>
+          <input id="apellidoPaterno" class="form-input" type="text" required>
+        </div>
+      </div>
+
+      <div class="form-column center">
+        <div class="form-group">
+          <label class="form-label">Apellido paterno</label>
+          <input id="apellidoMaterno" class="form-input" type="text" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Correo Electronico</label>
+          <input id="curp" class="form-input" type="text" required>
+        </div>
+      </div>
+      <div class="form-column right">
+        <div class="form-group">
+          <label class="form-label">Apellido Materno</label>
+          <input id="numeroInterior" class="form-input" type="text">
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección de Datos Fiscales -->
+    <h3>Datos Fiscales</h3>
+    <div class="form-row">
+      <div class="form-column left">
+        <div class="form-group">
+          <label class="form-label">RFC</label>
+          <input id="rfc" class="form-input" type="text" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Numero Interior</label>
+          <input id="numeroExterior" class="form-input" type="text" required>
+        </div>
+      </div>
+
+      <div class="form-column center">
+        <div class="form-group">
+          <label class="form-label">Régimen fiscal</label>
+          <select id="regimenFiscal" class="form-select" required>
+            <option value="">Elige alguna opción</option>
+            <option value="605">605 - Sueldos y Salarios E Ingresos Asimilados a Salarios</option>
+            <option value="Simplificado de Confianza">Simplificado de Confianza</option>
+            <option value="612">612 - Persona física con actividad empresarial</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Numero Exterior</label>
+          <input id="numeroExterior" class="form-input" type="text" required>
+        </div>
+      </div>
+
+      <div class="form-column right">
+        <div class="form-group">
+          <label class="form-label">Calle</label>
+          <input id="numeroInterior" class="form-input" type="text">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Colonia</label>
+          <input id="colonia" class="form-input" type="text" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-column left">
+        <div class="form-group">
+          <label class="form-label">Municipio</label>
+          <input id="municipio" class="form-input" type="text" required>
+        </div>
+      </div>
+
+      <div class="form-column center">
+        <div class="form-group">
+          <label class="form-label">Estado</label>
+          <input id="estado" class="form-input" type="text" required>
+        </div>
+      </div>
+
+      <div class="form-column right">
+        <div class="form-group">
+          <label class="form-label">Código Postal</label>
+          <input id="codigoPostal" class="form-input" type="text" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botón de Envío -->
+    <div class="form-group">
+      <button class="form-button" type="submit">Ingresar</button>
+    </div>
+  </form>
+</div>
+
+
