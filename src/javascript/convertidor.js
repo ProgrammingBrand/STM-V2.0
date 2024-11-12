@@ -13,6 +13,7 @@ function handleSubmit(event) {
     regimenFiscal: document.getElementById("regimenFiscal").value,
     direccion: `${document.getElementById("numeroInterior").value} ${document.getElementById("numeroExterior").value} ${document.getElementById("colonia").value}, ${document.getElementById("municipio").value}, ${document.getElementById("estado").value}`,
     codigoPostal: document.getElementById("codigoPostal").value,
+    
   };
 
   // Envío de datos a PHP
