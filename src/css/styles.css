@@ -21,9 +21,9 @@ body {
 .sidebar {
     width: 250px;
     height: 100vh;
-    background-color: #333;
+    background-color: #333; /* Color de Fondo de Sidebar*/
     padding: 1rem;
-    color: #fff;
+    color: #fff;/* Color de Letras y logos de Sidebar*/
     flex-shrink: 0;
     position: relative;
 }
@@ -37,7 +37,7 @@ body {
 }
 
 .sidebar nav ul li a {
-    color: #fff;
+    color: #fff;/* Color de Letras de Sidebar en Nav ul li a*/
     text-decoration: none;
     font-weight: bold;
 }
@@ -52,7 +52,7 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: #ddd;
+    background: #ddd;/* Color de Fondo de Usuario*/
     padding: 10px 6px;
     box-sizing: border-box;
 }
@@ -88,7 +88,7 @@ body {
 
 .profile-content .profile .job {
     font-size: 13px;
-    color: #666;
+    color: #666;/* Color de Letras de Tipo de USUARIO*/
 }
 
 .profile #log_out {
@@ -97,13 +97,13 @@ body {
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
-    color: #f44336;
+    color: #f44336;/* Color de Logo Logout*/
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
 .profile #log_out:hover {
-    color: #d32f2f;
+    color: #d32f2f;/* Color de Logo Logout al presionar*/
 }
 
 .submenu {
@@ -134,8 +134,8 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    background-color: #e7e5e5;
-    color: #000;
+    background-color: #e7e5e5;/* Color de Header de TODAS LOS ENCABEZADOS DEL SISTEMA*/
+    color: #000;/* Color de Letras de TODAS LOS ENCABEZADOS DEL SISTEMA*/
     padding: 0 20px;
 }
 
@@ -167,9 +167,9 @@ body {
     max-width: 100vw;
     min-height: 3rem;
     padding: 1rem;
-    color: #fff;
-    background-color: #333;
-    border-top: 1px solid #ddd;
+    color: #fff;/* Color de Letras de TODAS LOS PIE DE PAGINA DEL SISTEMA*/
+    background-color: #333;/* Color de Pie de pagina de TODAS LOS PIE DE PAGINA DEL SISTEMA*/
+    border-top: 1px solid #ddd;/* Color de borde superior de TODAS LOS PIE DE PAGINA DEL SISTEMA*/
     transition: all 0.3s ease;
 }
 
@@ -178,13 +178,13 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #333;
-    color: #fff;
+    background-color: #333;/* Color de Pie de pagina de TODAS LOS PIE DE PAGINA DEL SISTEMA*/
+    color: #fff;/* Color de Letras de TODAS LOS PIE DE PAGINA DEL SISTEMA*/
     max-width: 100vw;
 }
 
 .footer-left a {
-    color: #fff;
+    color: #fff;/* Color de Letras de TODAS LOS PIE DE PAGINA DEL SISTEMA Lado izquierdo*/
     text-decoration: none;
     margin-right: 1.5rem;
 }
@@ -194,7 +194,7 @@ body {
 }
 
 .footer-right strong {
-    color: #fff;
+    color: #fff;/* Color de Letras de TODAS LOS PIE DE PAGINA DEL SISTEMA Lado Derecho*/
 }
 
 /* Forms */
@@ -204,14 +204,14 @@ body {
     flex-direction: column;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #f9f9f9;/* Color de Fondo de TODAS LOS FORMULARIOS DEL SISTEMA*/
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h3 {
     grid-column: span 3;
     font-size: 18px;
-    color: #333;
+    color: #333;/* Color de Letras de TODAS LOS FORMULARIOS DEL SISTEMA*/
     margin-bottom: 10px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 5px;
@@ -220,7 +220,7 @@ h3 {
 /* Etiquetas */
 .form-label {
     font-weight: bold;
-    color: #333;
+    color: #333;/* Color de Letras de TODAS LOS FORMULARIOS DEL SISTEMA*/
     margin-bottom: 5px;
 }
 
@@ -247,8 +247,8 @@ h3 {
     padding: 10px;
     font-size: 16px;
     font-weight: bold;
-    color: #fff;
-    background-color: #4CAF50;
+    color: #fff;/* Color de Letras de TODAS LOS FORMULARIOS DEL SISTEMA*/
+    background-color: #4CAF50;/* Color de Boton de TODAS LOS FORMULARIOS DEL SISTEMA*/
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -258,7 +258,7 @@ h3 {
 
 /* Efecto hover en el botón */
 .form-button:hover {
-    background-color: #45a049;
+    background-color: #45a049;/* Color de Boton de TODAS LOS FORMULARIOS DEL SISTEMA*/
 }
 
 
@@ -303,7 +303,7 @@ button, .upload-label {
 }
 
 .upload-label {
-    background-color: #4CAF50;
+    background-color: #4CAF50;/* Color de BOTON de TODAS LOS FORMULARIOS DEL SISTEMA*/
     color: white;
     border-radius: 5px;
     padding: 10px 20px;
@@ -311,5 +311,5 @@ button, .upload-label {
 }
 
 .upload-label:hover, button:hover {
-    background-color: #45a049;
+    background-color: #45a049;/* Color de BOTON de TODAS LOS FORMULARIOS DEL SISTEMA*/
 }
