@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/src/pages/dashboard.html"
+    "livePreview.defaultPreviewPath": "/src/pages/dashboard.html",
+    "cSpell.language": "en,es"
 }
