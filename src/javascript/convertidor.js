@@ -17,7 +17,7 @@ function handleSubmit(event) {
   };
 
   // Envío de datos a PHP
-  fetch("send-forms.php", {
+  fetch("/src/php/send-forms.php", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

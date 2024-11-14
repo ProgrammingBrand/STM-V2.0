@@ -1,6 +1,6 @@
 <?php
 // Incluye el archivo de conexión
-include 'link.php';
+include '/src/php/link.php';
 
 // Leer datos JSON enviados desde JavaScript
 $input = json_decode(file_get_contents("php://input"), true);
