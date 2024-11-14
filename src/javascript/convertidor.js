@@ -2,7 +2,7 @@
 function handleSubmit(event) {
   event.preventDefault();
 
-  // Captura y estructura de datos
+  // Captura y estructura de datos //para validar datos
   const data = {
     nombre: document.getElementById("nombre").value,
     apellidoP: document.getElementById("apellidoPaterno").value,
@@ -13,7 +13,7 @@ function handleSubmit(event) {
     regimenFiscal: document.getElementById("regimenFiscal").value,
     direccion: `${document.getElementById("numeroInterior").value} ${document.getElementById("numeroExterior").value} ${document.getElementById("colonia").value}, ${document.getElementById("municipio").value}, ${document.getElementById("estado").value}`,
     codigoPostal: document.getElementById("codigoPostal").value,
-    
+
   };
 
   // Envío de datos a PHP
