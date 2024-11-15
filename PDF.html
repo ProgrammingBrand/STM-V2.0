@@ -1,24 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Documento </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin:110px;
+        }
+        .container {
+            width: 800px;
+            border: 1px solid black;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        .header, .section, .table-section, .total-section, .footer {
+            display: none;
+            margin-top: 20px;
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .header-title, .section-title, .table-title {
+            font-weight: bold;
+            background-color: #009b8e;
+            color: white;
+            padding: 5px;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .table th, .table td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        .table th {
+            background-color: #009b8e;
+            color: white;
+        }
+        .blue-background {
+            background-color: #009b8e;
+            color: white;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
 </head>
+<body>
+
+<div class="container">
+    <!-- Input Fields for Data Entry -->
+    <h2>Ingresar datos para la factura</h2>
+    
+    <div>
+        <label>Nombre del Receptor:</label>
+        <input type="text" id="receptor-name" oninput="showReceptorSection()">
+    </div>
+    <div>
+        <label>RFC del Receptor:</label>
+        <input type="text" id="receptor-rfc" oninput="showReceptorSection()">
+    </div>
+    <div>
+        <label>Folio SAT:</label>
+        <input type="text" id="sat-folio" oninput="showDatosFiscalesSection()">
+    </div>
+    <div>
+        <label>Número de Serie Certificado Emisor:</label>
+        <input type="text" id="certificado-emisor" oninput="showDatosFiscalesSection()">
+    </div>
+
+    <!-- Header Section -->
+    <div id="header" class="header">
+        <div class="header-title">MAURO JESUS JACINTO SANTOS</div>
+        <p>FACTURA A289 - Fecha y hora de emisión: 15/11/2024 5:57 PM</p>
+    </div>
+    
+    <!-- Receptor Section -->
+    <div id="receptor-section" class="section">
+        <div class="section-title">Receptor</div>
+        <p><strong id="receptor-name-display"></strong></p>
+        <p>RFC: <span id="receptor-rfc-display"></span></p>
+        <p>Uso CFDI: D10 Pagos por servicios educativos</p>
+        <p>Domicilio fiscal: 39713</p>
+    </div>
+
+    <!-- Datos Fiscales Section -->
+    <div id="datos-fiscales-section" class="section">
+        <div class="section-title">Datos fiscales</div>
+        <p>Folio SAT: <span id="sat-folio-display"></span></p>
+        <p>Número de serie certificado emisor: <span id="certificado-emisor-display"></span></p>
+        <p>Número serie del certificado SAT: 00001000000598466663</p>
+        <p>Exportación: No aplica</p>
+    </div>
+
+    <!-- Table Section (Static Example) -->
+    <div id="table-section" class="table-section">
+        <div class="table-title">Detalles de Pago</div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Cant</th>
+                    <th>Unidad</th>
+                    <th>Clave</th>
+                    <th>Descripción</th>
+                    <th>Obj. impuesto</th>
+                    <th>Precio</th>
+                    <th>Importe</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1.00</td>
+                    <td>Unidad de servicio</td>
+                    <td>86121503</td>
+                    <td>pago de la reinscripcion...</td>
+                    <td>No objeto de impuesto</td>
+                    <td>$1,500.00</td>
+                    <td>$1,500.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Total Section -->
+    <div id="total-section" class="total-section">
+        <p>Subtotal: $1,500.00</p>
+        <p>Descuentos: $0.00</p>
+        <p class="blue-background">TOTAL: $1,500.00</p>
+    </div>
+
+    <!-- Footer Section -->
+    <div id="footer" class="footer">
+        <p>Forma de pago: Transferencia electrónica de fondos</p>
+        <p>Método de pago: Pago en una sola exhibición</p>
+        <p>Moneda: MXN Peso-Mexicano</p>
+    </div>
+</div>
+
+<script>
+    function showReceptorSection() {
+        const name = document.getElementById("receptor-name").value;
+        const rfc = document.getElementById("receptor-rfc").value;
+
+        if (name && rfc) {
+            document.getElementById("receptor-section").style.display = "block";
+            document.getElementById("header").style.display = "block";
+            document.getElementById("receptor-name-display").textContent = name;
+            document.getElementById("receptor-rfc-display").textContent = rfc;
+            showTableAndTotalSections();
+        } else {
+            document.getElementById("receptor-section").style.display = "none";
+        }
+    }
+
+    function showDatosFiscalesSection() {
+        const folio = document.getElementById("sat-folio").value;
+        const emisor = document.getElementById("certificado-emisor").value;
+
+        if (folio && emisor) {
+            document.getElementById("datos-fiscales-section").style.display = "block";
+            document.getElementById("sat-folio-display").textContent = folio;
+            document.getElementById("certificado-emisor-display").textContent = emisor;
+            showTableAndTotalSections();
+        } else {
+            document.getElementById("datos-fiscales-section").style.display = "none";
+        }
+    }
+
+    function showTableAndTotalSections() {
+        document.getElementById("table-section").style.display = "block";
+        document.getElementById("total-section").style.display = "block";
+        document.getElementById("footer").style.display = "block";
+    }
+</script>
+
 </body>
-<h1> FACTURA STM <h1>
-
-    <script type="text/javascript" src="jspdf.min.js"></script>
-    <a href="javascript:genPDF()">Generar PDF</a>
-    <script type="text/javascript">
-      function genPDF() {
-        var doc = new jsPDF();
-        doc.text(20, 20, 'ESTE ES UN TEXTO EN UN PDF')
-        doc.save('Midocumento.pdf')
-      }
-    </script>
-    </body>
-
 </html>

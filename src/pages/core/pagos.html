@@ -1,0 +1,117 @@
+<!--<style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 700px;
+            border: 2px solid black;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+        .header {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        .box {
+            width: 48%;
+            border: 2px solid black;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .payment-concepts {
+            border: 2px solid black;
+            padding: 10px;
+            height: 100px;
+            margin-bottom: 60px;
+        }
+        .total {
+            text-align: right;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border-top: 2px solid black;
+            padding-top: 10px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+        .button {
+            padding: 10px 20px;
+            border: 2px solid black;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>-->
+
+<div class="container">
+    <div class="header">
+        <div>Instituto Hispanoamericano Mexicano</div>
+        <div>Datos escolares y fiscales</div>
+        <!--<div class="logo">Logo.svg</div>-->
+
+    </div>
+    <label class="form-label">Factura</label>
+    <div class="row">
+
+        <label class="form-label">Datos del Alumno</label>
+        <input id="datos del Alumno" class="form-input" type="text" required>
+        <label class="form-label">Datos del Padre</label>
+        <input id="Datos del Padre" class="form-input" type="text" required>
+    </div>
+
+    <label class="form-label">concepto pago</label>
+    <input id="concepto pago" class="form-input" type="text" required>
+    <div class="total">Total</div>
+
+    <div class="buttons">
+        <label class="form-label"></label>
+        <button id="cancelar" class="form-input" type="button">Cancelar</button>
+        <label class="form-label"></label>
+        <button id="cancelar" class="form-input" type="button">emitir</button>
+
+
+    </div>
+</div>
+
+<script>
+    function cancelar() {
+        // Reset form fields or reload the page to clear all inputs
+        if (confirm("¿Estás seguro de que deseas cancelar?")) {
+            location.reload();
+        }
+    }
+
+    function emitir() {
+        // Simulate form submission
+        alert("Factura emitida con éxito.");
+        // Additional submission logic can be added here
+    }
+</script>
