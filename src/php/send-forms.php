@@ -49,7 +49,7 @@ try {
         // Validar que los campos no estén vacíos
         if (!empty($nombre) && !empty($apellido) && !empty($email)) {
             // Preparar y ejecutar la consulta SQL
-            $stmt = $conn->prepare("INSERT INTO padres (Nombre, ApellidoP, ApellidoM) VALUES (:nombre, :apellido, :email)");
+            $stmt = $conn->prepare("INSERT INTO alumnos (Nombre, ApellidoP, ApellidoM, CURP, NivelEducativo, Grado, Matricula) VALUES (:nombre, :apellidoPaterno, :apellidoMaterno, :curp, :nivelEstudios, :gradoEstudios, :matricula)");
             $stmt->bindParam(':nombre', $nombre);
             $stmt->bindParam(':apellido', $apellido);
             $stmt->bindParam(':email', $email);
