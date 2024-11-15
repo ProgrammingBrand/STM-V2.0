@@ -3,7 +3,7 @@
 </div>
 
 <div class="main-form">
-    <form id="userForm" onsubmit="handleSubmit(event)">
+    <form id="userForm">
         <h3>Datos Personales</h3>
         <div class="form-row">
             <div class="form-column left">
@@ -107,58 +107,5 @@
 
         <button type="submit">Registrar Alumno</button>
     </form>
+    <script src="/src/javascript/convertidor.js"></script>
 </div>
-
-<script>
-    const video = document.getElementById('camera');
-    const takePhotoButton = document.getElementById('take-photo');
-    const photoDataField = document.getElementById('photo-data');
-
-    function startCamera() {
-        navigator.mediaDevices.getUserMedia({ video: true })
-            .then(stream => {
-                video.srcObject = stream;
-            })
-            .catch(err => {
-                console.error('Error al acceder a la cámara:', err);
-                alert("No se puede acceder a la cámara. Asegúrate de haber dado los permisos.");
-            });
-    }
-
-    takePhotoButton.addEventListener('click', () => {
-        startCamera();
-
-        setTimeout(() => {
-            const canvas = document.createElement('canvas');
-            const context = canvas.getContext('2d');
-            canvas.width = video.videoWidth;
-            canvas.height = video.videoHeight;
-            context.drawImage(video, 0, 0, canvas.width, canvas.height);
-
-            const dataUrl = canvas.toDataURL('image/png');
-            photoDataField.value = dataUrl;
-        }, 1000);
-    });
-
-    const uploadInput = document.getElementById('upload');
-    uploadInput.addEventListener('change', event => {
-        const file = event.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                const imgElement = document.createElement('img');
-                imgElement.src = e.target.result;
-                imgElement.style.maxWidth = '100%';
-                imgElement.style.marginTop = '15px';
-                document.body.appendChild(imgElement);
-            };
-            reader.readAsDataURL(file);
-        }
-    });
-
-    function handleSubmit(event) {
-        event.preventDefault();
-        const formData = new FormData(document.getElementById('userForm'));
-        console.log('Datos del formulario:', formData);
-    }
-</script>

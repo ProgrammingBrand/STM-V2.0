@@ -9,7 +9,7 @@ document.getElementById("userForm").addEventListener("submit", function (e) {
   })
   .then(response => response.text())
   .then(data => {
-      document.getElementById("submit").innerHTML = data;
+      document.getElementById("msg_sucess").innerHTML = data;
   })
   .catch(error => {
       console.error("Error:", error);
