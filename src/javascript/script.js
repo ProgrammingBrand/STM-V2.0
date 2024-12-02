@@ -7,11 +7,11 @@ document.getElementById("registroForm").addEventListener("submit", function (e) 
         method: "POST",
         body: formData,
     })
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById("respuesta").innerHTML = data;
-    })
-    .catch(error => {
-        console.error("Error:", error);
-    });
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("respuesta").innerHTML = data;
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
 });
